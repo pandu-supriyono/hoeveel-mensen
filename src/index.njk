@@ -55,7 +55,7 @@
     }
 
     const conditions = [
-      [(x) => !x, 'Je moet een invullen hoeveel gebruikers je gaat verwachten'],
+      [(x) => !x, 'Je moet invullen hoeveel gebruikers je gaat verwachten'],
       [(x) => Number.isNaN(Number(x)), 'Je moet een nummer invullen die hoger is dan 0'],
       [(x) => !Number.isNaN(Number(x)) && !Number(x) > 0, 'Je moet een nummer invullen die hoger is dan 0']
     ]
