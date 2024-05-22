@@ -47,5 +47,41 @@
     "percent": 80,
     "source": "https://www.communicatierijk.nl/vakkennis/inclusieve-communicatie/begrijpelijke-communicatie",
     "type": "b"
+  },
+  {
+    "measure": "Dyslexie",
+    "percent": 4,
+    "source": "https://balansdigitaal.nl/kennisbank/ontwikkelingsproblemen/welke-ontwikkelingsproblemen-zijn-er/wat-is-dyslexie#:~:text=In%20Nederland%20heeft%20ongeveer%204,een%20kind%20met%20dyslexie%20zit.",
+    "type": "a"
+  },
+  {
+    "measure": "Dyscalculie",
+    "percent": 4,
+    "source": "https://www.impulsenwoortblind.nl/dyslexie-dyscalculie/dyscalculie#:~:text=Dyscalculie%20komt%20ongeveer%20net%20zo,minder%20goed%20herkend%20dan%20dyslexie.",
+    "type": "a"
+  },
+  {
+    "measure": "Autisme",
+    "percent": 2,
+    "source": "https://www.autisme.nl/over-autisme/wat-is-autisme/#:~:text=Ongeveer%201%25%20tot%202%25%20van,zorgverleners%20%E2%80%93%20is%20vele%20malen%20groter.",
+    "type": "a"
+  },
+  {
+    "measure": "Kleurenblindheid (mannen)",
+    "percent": 8,
+    "source": "https://www.oogvereniging.nl/oogklachten/kleurenblindheid/#:~:text=Kleurenblindheid%20bij%20mannen,-Rood%2Dgroenkleurenblindheid%20komt&text=Ongeveer%201%20op%20de%2012,op%20het%20X%2Dchromosoom%20liggen.",
+    "type": "a"
+  },
+  {
+    "measure": "Kleurenblindheid (vrouwen)",
+    "percent": 0.004,
+    "source": "https://www.oogvereniging.nl/oogklachten/kleurenblindheid/#:~:text=Kleurenblindheid%20bij%20mannen,-Rood%2Dgroenkleurenblindheid%20komt&text=Ongeveer%201%20op%20de%2012,op%20het%20X%2Dchromosoom%20liggen.",
+    "type": "a"
+  },
+  {
+    "measure": "Gebruikt Nederlands Gebarentaal",
+    "percent": 0.3,
+    "source": "https://www.researchgate.net/profile/Corrie-Tijsseling/publication/338274451_10_In_Pursuit_of_Legal_Recognition_of_the_Sign_Language_of_the_Netherlands/links/5e27581c4585150ee7783277/10-In-Pursuit-of-Legal-Recognition-of-the-Sign-Language-of-the-Netherlands.pdf",
+    "type": "b"
   }
 ]
