@@ -18,7 +18,7 @@
         {{ site.description }}
       </p>
 
-      <form>
+      <form id="calculate-form">
         <label for="number-of-users">
           Aantal gebruikers
         </label>
@@ -27,5 +27,193 @@
       </form>
     </div>
   </div>
+
+  <div class="container">
+    <div id="results"></div>
+  </div>
+
+  <script>
+    const statsJSONString = '{{ stats | stringifyJSON | safe }}'
+
+    const stats = JSON.parse(statsJSONString);
+
+    const searchParams = new URLSearchParams(window.location.search);
+
+    const input = document.querySelector('#number-of-users');
+
+    const form = document.querySelector('#calculate-form');
+
+    const types = {
+      a: 'Beperkingen en aandoeningen',
+      b: 'Taal'
+    }
+
+    const conditions = [
+      [(x) => !x, 'Je moet een invullen hoeveel gebruikers je gaat verwachten'],
+      [(x) => Number.isNaN(Number(x)), 'Je moet een nummer invullen die hoger is dan 0'],
+      [(x) => !Number.isNaN(Number(x)) && !Number(x) > 0, 'Je moet een nummer invullen die hoger is dan 0']
+    ]
+
+    if (searchParams.get('number-of-users')) {
+      input.value = searchParams.get('number-of-users');
+
+      const passesCondition = conditions.every(([validateFn]) => {
+        if (validateFn(searchParams.get('number-of-users'))) {
+          return false;
+        }
+
+        return true;
+      });
+
+      if (!passesCondition) {
+        window.history.replaceState(null, null, '?');
+      } else {
+        performSearch(Number(searchParams.get('number-of-users')));
+      }
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(e.target);
+
+      const numberOfUsers = formData.get('number-of-users');
+
+      let isError = false;
+
+      conditions.every(([validateFn, errorMessage]) => {
+        if (validateFn(numberOfUsers)) {
+          attachErrorMessage(errorMessage);
+
+          isError = true;
+          return false;
+        }
+
+        removeErrorMessage();
+
+        isError = false;
+        return true;
+      })
+
+      if (isError) {
+        return;
+      }
+
+      searchParams.set("number-of-users", numberOfUsers);
+
+      window.history.replaceState(null, null, `?${searchParams.toString()}`);
+
+      performSearch(numberOfUsers);
+    });
+
+    function removeErrorMessage() {
+      const existingError = document.querySelector('#error');
+
+      if (existingError) {
+        existingError.remove();
+
+        input.removeAttribute('aria-describedby');
+      }
+    }
+
+    function attachErrorMessage(errorMessage) {
+      const existingError = document.querySelector('#error');
+
+      if (existingError) {
+        existingError.textContent = errorMessage;
+
+        return;
+      }
+
+      const errorElement = document.createElement('span');
+
+      errorElement.setAttribute('id', 'error');
+
+      errorElement.setAttribute('aria-live', 'polite');
+
+      errorElement.classList.add('error-message');
+
+      errorElement.textContent = errorMessage;
+
+      input.setAttribute('aria-describedby', 'error');
+
+      input.after(errorElement);
+    }
+
+    function performSearch(amount) {
+      const results = document.querySelector('#results');
+
+      results.innerHTML = '';
+
+      Object.entries(types).forEach(([type, label]) => {
+        const items = stats.filter((item) => item.type === type);
+
+        const table = document.createElement('table');
+
+        const thead = document.createElement('thead');
+
+        const trHead = document.createElement('tr');
+
+        const th = ['Categorie', 'Aantal gebruikers', 'Bron'].map((headingItem) => {
+          const heading = document.createElement('th');
+
+          heading.textContent = headingItem;
+
+          return heading;
+        });
+
+        trHead.append(...th);
+
+        thead.append(trHead);
+
+        const tbody = document.createElement('tbody');
+
+        items.sort((a, b) => {
+          const measureA = a.measure.toLowerCase();
+          const measureB = b.measure.toLowerCase();
+
+          if (measureA < measureB) {
+            return -1;
+          }
+
+          if (measureA > measureB) {
+            return 1;
+          }
+
+          return 0;
+        }).forEach((item) => {
+          const tr = document.createElement('tr');
+
+          const category = document.createElement('th');
+          category.setAttribute('scope', 'row');
+          const number = document.createElement('td');
+          const source = document.createElement('td');
+          const sourceLink = document.createElement('a');
+
+          category.textContent = item.measure;
+          number.textContent = Math.ceil((item.percent * amount) / 100);
+          sourceLink.textContent = 'Bron';
+          sourceLink.setAttribute('href', item.source);
+          source.append(sourceLink);
+
+          tr.append(category, number, source);
+
+          tbody.append(tr);
+        });
+
+        table.append(thead);
+
+        table.append(tbody);
+
+        const heading = document.createElement('h2');
+
+        heading.textContent = label;
+
+        results.append(heading);
+
+        results.append(table);
+      });
+    }
+  </script>
 </body>
 </html>

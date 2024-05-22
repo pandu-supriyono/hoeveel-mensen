@@ -1,49 +1,49 @@
 [
   {
-    "measure": "low_numeracy",
+    "measure": "Laaggecijferd",
     "percent": 16,
     "source": "https://www.rekenkamer.nl/publicaties/rapporten/2016/04/20/aanpak-van-laaggeletterdheid",
     "notes": "Volwassenen",
     "type": "a"
   },
   {
-    "measure": "low_literacy",
+    "measure": "Laaggeletterd",
     "percent": 15,
     "source": "https://www.rekenkamer.nl/publicaties/rapporten/2016/04/20/aanpak-van-laaggeletterdheid",
     "notes": "Volwassenen",
     "type": "a"
   },
   {
-    "measure": "mental_health_impairment",
+    "measure": "Psychische aandoening",
     "percent": 25,
     "source": "https://www.trimbos.nl/kennis/cijfers/psychische-gezondheid-ggz/",
     "notes": "Volwassenen",
     "type": "a"
   },
   {
-    "measure": "motor_disability",
+    "measure": "Motorische beperking",
     "percent": 8,
     "source": "https://handicap.nl/wat-is-een-motorische-beperking/"
   },
   {
-    "measure": "deaf_hoh",
+    "measure": "Doof of slechthorend",
     "percent": 9,
     "source": "https://www.gebarencentrum.nl/vragen%20over%20NGT"
   },
   {
-    "measure": "vision",
+    "measure": "Blind of slechtziend",
     "percent": 2,
     "source": "https://bartimeus.nl/slechtziend-en-blind"
   },
   {
-    "measure": "adhd",
+    "measure": "ADHD",
     "percent": 3,
     "source": "https://www.vzinfo.nl/adhd/totale-bevolking#:~:text=In%202021%20waren%20er%20naar,bekend%20bij%20de%20huisarts%20(jaarprevalentie",
     "notes": "Volwassenen",
     "type": "a"
   },
   {
-    "measure": "b1_dutch",
+    "measure": "Nederlands op minimaal B1-niveau",
     "percent": 80,
     "source": "https://www.communicatierijk.nl/vakkennis/inclusieve-communicatie/begrijpelijke-communicatie",
     "type": "b"

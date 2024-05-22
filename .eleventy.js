@@ -6,6 +6,8 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.setTemplateFormats(['njk', 'css']);
 
+  eleventyConfig.addNunjucksFilter('stringifyJSON', JSON.stringify);
+
   return {
     dir: {
       input: 'src',
