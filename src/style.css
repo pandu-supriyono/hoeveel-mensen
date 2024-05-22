@@ -276,3 +276,8 @@ th {
 #results tbody td:nth-child(2) {
   text-align: right;
 }
+
+.phase-banner {
+  padding-block: 5px;
+  border-bottom: 1px solid var(--color-foreground);
+}
