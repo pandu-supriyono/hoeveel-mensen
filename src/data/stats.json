@@ -4,14 +4,14 @@
     "percent": 16,
     "source": "https://www.rekenkamer.nl/publicaties/rapporten/2016/04/20/aanpak-van-laaggeletterdheid",
     "notes": "Volwassenen",
-    "type": "a"
+    "type": "c"
   },
   {
     "measure": "Laaggeletterd",
     "percent": 15,
     "source": "https://www.rekenkamer.nl/publicaties/rapporten/2016/04/20/aanpak-van-laaggeletterdheid",
     "notes": "Volwassenen",
-    "type": "a"
+    "type": "c"
   },
   {
     "measure": "Psychische aandoening",
@@ -43,7 +43,25 @@
     "type": "a"
   },
   {
-    "measure": "Nederlands op minimaal B1-niveau",
+    "measure": "Dementie",
+    "percent": 0.017,
+    "source": "https://www.alzheimer-nederland.nl/factsheet-cijfers-en-feiten-over-dementie",
+    "type": "a"
+  },
+  {
+    "measure": "Verstandelijke beperking",
+    "percent": 2.3,
+    "source": "https://files.cargocollective.com/c1108496/Digitaal---De-Fabeltjes-krant.pdf",
+    "type": "a"
+  },
+  {
+    "measure": "Enige beperking",
+    "percent": 11,
+    "source": "https://www.rijksoverheid.nl/onderwerpen/rechten-van-mensen-met-een-handicap#:~:text=In%20Nederland%20hebben%202%20miljoen,in%20andere%20wetten%20en%20regels.",
+    "type": "a"
+  },
+  {
+    "measure": "B1 Nederlands of hoger",
     "percent": 80,
     "source": "https://www.communicatierijk.nl/vakkennis/inclusieve-communicatie/begrijpelijke-communicatie",
     "type": "b"
@@ -83,5 +101,11 @@
     "percent": 0.3,
     "source": "https://www.researchgate.net/profile/Corrie-Tijsseling/publication/338274451_10_In_Pursuit_of_Legal_Recognition_of_the_Sign_Language_of_the_Netherlands/links/5e27581c4585150ee7783277/10-In-Pursuit-of-Legal-Recognition-of-the-Sign-Language-of-the-Netherlands.pdf",
     "type": "b"
+  },
+  {
+    "measure": "Internationale kenniswerkers",
+    "percent": 2.1,
+    "source": "https://files.cargocollective.com/c1108496/Digitaal---De-Fabeltjes-krant.pdf",
+    "type": "c"
   }
 ]
