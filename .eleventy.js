@@ -4,6 +4,8 @@ const UserConfig = require('@11ty/eleventy/src/UserConfig');
 module.exports = (eleventyConfig) => {
   eleventyConfig.addGlobalData('pkg', require('./package.json'));
 
+  eleventyConfig.setTemplateFormats(['njk', 'css']);
+
   return {
     dir: {
       input: 'src',
