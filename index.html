@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>✨</text></svg>"></link>
   <title>Hoeveel mensen?</title>
-  <meta name="description" content="Schat in hoeveel mensen in Nederland een beperking of andere kenmerken hebben die van invloed kunnen zijn op hoe je website of dienst wordt gebruikt.">
+  <meta name="description" content="Schat hoeveel mensen moeite kunnen hebben met toegang tot de digitale wereld vanwege verschillende kenmerken. Gebruik deze informatie om problemen in je eigen digitale dienst te verminderen en om bij te dragen aan een inclusieve toekomst.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
       </h1>
 
       <p>
-        Schat in hoeveel mensen in Nederland een beperking of andere kenmerken hebben die van invloed kunnen zijn op hoe je website of dienst wordt gebruikt.
+        Schat hoeveel mensen moeite kunnen hebben met toegang tot de digitale wereld vanwege verschillende kenmerken. Gebruik deze informatie om problemen in je eigen digitale dienst te verminderen en om bij te dragen aan een inclusieve toekomst.
       </p>
 
       <form id="calculate-form">
@@ -42,12 +42,14 @@
 
   <footer>
     <div class="container">
-      Door <a href="https://supriyono.nl">Pandu Supriyono</a>. Geïnspireerd door <a href="https://design.education.gov.uk/tools/how-many-users">het werk van het Britse ministerie van Onderwijs</a>. Zie <a href="https://github.com/pandu-supriyono/hoeveel-mensen">de Broncode van deze website</a>
+      Door <a href="https://supriyono.nl">Pandu Supriyono</a>. Geïnspireerd door <a href="https://design.education.gov.uk/tools/how-many-users">het werk van het Britse ministerie van Onderwijs</a> en de <a href="https://digitalservicebund.github.io/wie-viele-menschen/">Digitale Dienst van de Bondsrepubliek Duitsland</a>. Zie <a href="https://github.com/pandu-supriyono/hoeveel-mensen">de Broncode van deze website</a>
     </div>
   </footer>
 
   <script>
-    const statsJSONString = '[{"measure":"Laaggecijferd","percent":16,"source":"https://www.rekenkamer.nl/publicaties/rapporten/2016/04/20/aanpak-van-laaggeletterdheid","notes":"Volwassenen","type":"a"},{"measure":"Laaggeletterd","percent":15,"source":"https://www.rekenkamer.nl/publicaties/rapporten/2016/04/20/aanpak-van-laaggeletterdheid","notes":"Volwassenen","type":"a"},{"measure":"Psychische aandoening","percent":25,"source":"https://www.trimbos.nl/kennis/cijfers/psychische-gezondheid-ggz/","notes":"Volwassenen","type":"a"},{"measure":"Motorische beperking","percent":8,"source":"https://handicap.nl/wat-is-een-motorische-beperking/"},{"measure":"Doof of slechthorend","percent":9,"source":"https://www.gebarencentrum.nl/vragen%20over%20NGT"},{"measure":"Blind of slechtziend","percent":2,"source":"https://bartimeus.nl/slechtziend-en-blind"},{"measure":"ADHD","percent":3,"source":"https://www.vzinfo.nl/adhd/totale-bevolking#:~:text=In%202021%20waren%20er%20naar,bekend%20bij%20de%20huisarts%20(jaarprevalentie","notes":"Volwassenen","type":"a"},{"measure":"Nederlands op minimaal B1-niveau","percent":80,"source":"https://www.communicatierijk.nl/vakkennis/inclusieve-communicatie/begrijpelijke-communicatie","type":"b"}]'
+    const statsJSONString = '[{"measure":"Laaggecijferd","percent":16,"source":"https://www.rekenkamer.nl/publicaties/rapporten/2016/04/20/aanpak-van-laaggeletterdheid","notes":"Volwassenen","type":"c"},{"measure":"Laaggeletterd","percent":15,"source":"https://www.rekenkamer.nl/publicaties/rapporten/2016/04/20/aanpak-van-laaggeletterdheid","notes":"Volwassenen","type":"c"},{"measure":"Psychische aandoening","percent":25,"source":"https://www.trimbos.nl/kennis/cijfers/psychische-gezondheid-ggz/","notes":"Volwassenen","type":"a"},{"measure":"Motorische beperking","percent":8,"source":"https://handicap.nl/wat-is-een-motorische-beperking/"},{"measure":"Doof of slechthorend","percent":9,"source":"https://www.gebarencentrum.nl/vragen%20over%20NGT"},{"measure":"Blind of slechtziend","percent":2,"source":"https://bartimeus.nl/slechtziend-en-blind"},{"measure":"ADHD","percent":3,"source":"https://www.vzinfo.nl/adhd/totale-bevolking#:~:text=In%202021%20waren%20er%20naar,bekend%20bij%20de%20huisarts%20(jaarprevalentie","notes":"Volwassenen","type":"a"},{"measure":"Dementie","percent":0.017,"source":"https://www.alzheimer-nederland.nl/factsheet-cijfers-en-feiten-over-dementie","type":"a"},{"measure":"Verstandelijke beperking","percent":2.3,"source":"https://files.cargocollective.com/c1108496/Digitaal---De-Fabeltjes-krant.pdf","type":"a"},{"measure":"Enige beperking","percent":11,"source":"https://www.rijksoverheid.nl/onderwerpen/rechten-van-mensen-met-een-handicap#:~:text=In%20Nederland%20hebben%202%20miljoen,in%20andere%20wetten%20en%20regels.","type":"a"},{"measure":"B1 Nederlands of hoger","percent":80,"source":"https://www.communicatierijk.nl/vakkennis/inclusieve-communicatie/begrijpelijke-communicatie","type":"b"},{"measure":"Dyslexie","percent":4,"source":"https://balansdigitaal.nl/kennisbank/ontwikkelingsproblemen/welke-ontwikkelingsproblemen-zijn-er/wat-is-dyslexie#:~:text=In%20Nederland%20heeft%20ongeveer%204,een%20kind%20met%20dyslexie%20zit.","type":"a"},{"measure":"Dyscalculie","percent":4,"source":"https://www.impulsenwoortblind.nl/dyslexie-dyscalculie/dyscalculie#:~:text=Dyscalculie%20komt%20ongeveer%20net%20zo,minder%20goed%20herkend%20dan%20dyslexie.","type":"a"},{"measure":"Autisme","percent":2,"source":"https://www.autisme.nl/over-autisme/wat-is-autisme/#:~:text=Ongeveer%201%25%20tot%202%25%20van,zorgverleners%20%E2%80%93%20is%20vele%20malen%20groter.","type":"a"},{"measure":"Kleurenblindheid (mannen)","percent":8,"source":"https://www.oogvereniging.nl/oogklachten/kleurenblindheid/#:~:text=Kleurenblindheid%20bij%20mannen,-Rood%2Dgroenkleurenblindheid%20komt&text=Ongeveer%201%20op%20de%2012,op%20het%20X%2Dchromosoom%20liggen.","type":"a"},{"measure":"Kleurenblindheid (vrouwen)","percent":0.004,"source":"https://www.oogvereniging.nl/oogklachten/kleurenblindheid/#:~:text=Kleurenblindheid%20bij%20mannen,-Rood%2Dgroenkleurenblindheid%20komt&text=Ongeveer%201%20op%20de%2012,op%20het%20X%2Dchromosoom%20liggen.","type":"a"},{"measure":"Gebruikt Nederlands Gebarentaal","percent":0.3,"source":"https://www.researchgate.net/profile/Corrie-Tijsseling/publication/338274451_10_In_Pursuit_of_Legal_Recognition_of_the_Sign_Language_of_the_Netherlands/links/5e27581c4585150ee7783277/10-In-Pursuit-of-Legal-Recognition-of-the-Sign-Language-of-the-Netherlands.pdf","type":"b"},{"measure":"Internationale kenniswerkers","percent":2.1,"source":"https://files.cargocollective.com/c1108496/Digitaal---De-Fabeltjes-krant.pdf","type":"c"}]'
+
+    const formatter = Intl.NumberFormat('nl-NL');
 
     const stats = JSON.parse(statsJSONString);
 
@@ -59,7 +61,8 @@
 
     const types = {
       a: 'Beperkingen en aandoeningen',
-      b: 'Taal'
+      b: 'Taal',
+      c: 'Sociaaleconomische factoren'
     }
 
     const conditions = [
@@ -159,6 +162,18 @@
 
       results.innerHTML = '';
 
+      const resultHeading = document.createElement('h2');
+
+      const resultLead = document.createElement('p');
+
+      resultHeading.textContent = `Resultaat voor ${formatter.format(amount)} gebruiker(s)`;
+
+      resultLead.textContent = `Deze cijfers zijn gebaseerd op gegevens uit verschillende bronnen. Een persoon kan meerdere kenmerken hebben, waardoor het aantal niet op ${amount} uitkomt.`
+
+      results.append(resultHeading);
+
+      results.append(resultLead);
+
       Object.entries(types).forEach(([type, label]) => {
         const items = stats.filter((item) => item.type === type);
 
@@ -205,7 +220,7 @@
           const sourceLink = document.createElement('a');
 
           category.textContent = item.measure;
-          number.textContent = Math.ceil((item.percent * amount) / 100);
+          number.textContent = formatter.format(Math.ceil((item.percent * amount) / 100));
           sourceLink.textContent = 'Bron';
           sourceLink.setAttribute('href', item.source);
           source.append(sourceLink);
@@ -219,7 +234,7 @@
 
         table.append(tbody);
 
-        const heading = document.createElement('h2');
+        const heading = document.createElement('h3');
 
         heading.textContent = label;
 
