@@ -1,0 +1,19 @@
+{
+  "name": "hoeveel-mensen",
+  "version": "1.0.0",
+  "description": "Mini website to help you know how many of your users in the Netherlands may be excluded from your service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pandu-supriyono/hoeveel-mensen.git"
+  },
+  "author": "Pandu Supriyono <mail@supriyono.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pandu-supriyono/hoeveel-mensen/issues"
+  },
+  "homepage": "https://github.com/pandu-supriyono/hoeveel-mensen#readme"
+}
