@@ -159,6 +159,18 @@
 
       results.innerHTML = '';
 
+      const resultHeading = document.createElement('h2');
+
+      const resultLead = document.createElement('p');
+
+      resultHeading.textContent = `Resultaat voor ${amount} gebruiker(s)`;
+
+      resultLead.textContent = `Deze cijfers zijn gebaseerd op gegevens uit verschillende bronnen. Een persoon kan meerdere kenmerken hebben, waardoor het aantal niet op ${amount} uitkomt.`
+
+      results.append(resultHeading);
+
+      results.append(resultLead);
+
       Object.entries(types).forEach(([type, label]) => {
         const items = stats.filter((item) => item.type === type);
 
@@ -219,7 +231,7 @@
 
         table.append(tbody);
 
-        const heading = document.createElement('h2');
+        const heading = document.createElement('h3');
 
         heading.textContent = label;
 
