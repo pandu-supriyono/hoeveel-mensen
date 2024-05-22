@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,6 +48,8 @@
 
   <script>
     const statsJSONString = '{{ stats | stringifyJSON | safe }}'
+
+    const formatter = Intl.NumberFormat('nl-NL');
 
     const stats = JSON.parse(statsJSONString);
 
@@ -163,7 +165,7 @@
 
       const resultLead = document.createElement('p');
 
-      resultHeading.textContent = `Resultaat voor ${amount} gebruiker(s)`;
+      resultHeading.textContent = `Resultaat voor ${formatter.format(amount)} gebruiker(s)`;
 
       resultLead.textContent = `Deze cijfers zijn gebaseerd op gegevens uit verschillende bronnen. Een persoon kan meerdere kenmerken hebben, waardoor het aantal niet op ${amount} uitkomt.`
 
@@ -217,7 +219,7 @@
           const sourceLink = document.createElement('a');
 
           category.textContent = item.measure;
-          number.textContent = Math.ceil((item.percent * amount) / 100);
+          number.textContent = formatter.format(Math.ceil((item.percent * amount) / 100));
           sourceLink.textContent = 'Bron';
           sourceLink.setAttribute('href', item.source);
           source.append(sourceLink);
